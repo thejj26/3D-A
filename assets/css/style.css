@@ -17,6 +17,12 @@ body {
     margin: 0 auto;
 }
 
+.grid {
+    display: grid;
+    grid-template-columns: repeat(12, minmax(0, 1fr));
+    column-gap: 30px;
+}
+
 header {
     height: 95px;
     width: 100%;
@@ -52,8 +58,9 @@ header li:not(:first-of-type) {
 }
 
 .intro {
-    padding-top: 70px;
+    padding-top: 185px;
     padding-bottom: 250px;
+    position: relative;
 }
 
 .intro h6 {
@@ -98,4 +105,59 @@ h1>span {
     width: 260px;
 }
 
-/*csstricks flexbox*/
+.right {
+    display: flex;
+    justify-content: flex-end;
+    position: absolute;
+    bottom: 0;
+    right: 135px;
+}
+
+.about-me {
+    padding-top:120px;
+    padding-bottom: 210px;
+}
+
+.am-title {
+    grid-column: span 5;
+    background-image: url("/assets/img/about_shap_bg\ 1.png");
+    background-size: cover;
+}
+
+.am-content {
+    grid-column: span 7;
+}
+
+.am-title h2 {
+    font-weight: 700;
+    font-size: 45px;
+    line-height: 54px;
+    align-self: center;
+}
+
+.am-content p {
+    font-size: 16px;
+    line-height: 28px;
+}
+
+.am-content>div{
+    margin-top: 45px;
+    display: flex;
+    gap: 30px;
+    justify-content:flex-start;
+}
+
+.am-content button {
+    font-size: 20px;
+    line-height: 35px;
+    border-radius: 4px;
+    background-color:#FEB633;
+    color: #FFFFFF;
+    border: 2px #FEB633 solid;
+    padding: 14px 40px 15px 40px;
+}
+
+.am-content button:not(:first-of-type){
+    color: #FEB633;
+    background: none;
+}
