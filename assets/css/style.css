@@ -1,216 +1,334 @@
 * {
-    margin: 0;
-    padding: 0;
-    font-family: 'Poppins';
-    font-style: normal;
-}
-
-.container {
-    padding: 0 135px;
+  margin: 0;
+  padding: 0;
 }
 
 body {
-    background: #2B2C2C;
-    color: #CCC;
+  background: #2b2c2c;
+  color: #ccc;
+  font-family: "Poppins", sans-serif;
+}
+
+.container {
+  padding-left: 135px;
+  padding-right: 135px;
 }
 
 .maxw {
-    max-width: 1170px;
-    margin: 0 auto;
+  max-width: 1170px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .grid {
-    display: grid;
-    grid-template-columns: repeat(12, minmax(0, 1fr));
-    column-gap: 30px;
+  display: grid;
+  grid-template-columns: repeat(12, minmax(0, 1fr));
+  column-gap: 30px;
+  row-gap: 30px;
+  /*gap: 30px*/
 }
 
 header {
-    height: 95px;
-    width: 100%;
-    margin-top: 20px;
-    display: flex;
+  height: 95px;
+  width: 100%;
+  margin-top: 20px;
+  display: flex;
 }
 
+/*objasniti selektore*/
 header>div {
-    display: flex;
-    flex: 1;
-    flex-direction: row;
-    align-items: center;
-    justify-content: space-between;
+  display: flex;
+  flex: 1;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
 }
 
 header ul {
-    list-style: none;
-    display: flex;
+  list-style: none;
+  display: flex;
+  /*kako riješiti razmak*/
+  gap: 42px;
 }
 
 header li a {
-    font-weight: 500;
-    font-size: 14px;
-    line-height: 50px;
-    letter-spacing: 0.012em;
-    color: #FFF;
-    border: 1px solid #000;
-    text-decoration: none;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 50px;
+  letter-spacing: 0.012em;
+  color: #fff;
+  text-decoration: none;
 }
 
+/* kako riješiti razmak 2. način
 header li:not(:first-of-type) {
-    margin-left: 42px;
-}
-
+  margin-left: 42px;
+}*/
 .intro {
-    padding-top: 185px;
-    padding-bottom: 250px;
-    position: relative;
+  /*kada koristimo flexbox*/
+  /*padding-top: 70px;*/
+  /*padding-top: 145px;*/
+  /*padding-bottom: 250px;*/
+  /*position: relative;*/
 }
 
 .intro h6 {
-    font-weight: 500;
-    font-size: 14px;
-    line-height: 30px;
-    letter-spacing: 0.075em;
-    color: #FFFFFF;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 30px;
+  letter-spacing: 0.075em;
+  color: #ffffff;
 }
 
 .intro h1 {
-    font-weight: 600;
-    font-size: 60px;
-    line-height: 90px;
-    letter-spacing: 0.012em;
-    color: #FFFFFF;
-    margin-top: 10px;
+  font-weight: 600;
+  font-size: 60px;
+  line-height: 90px;
+  letter-spacing: 0.012em;
+  color: #ffffff;
+  margin-top: 10px;
 }
 
 .intro p {
-    font-weight: 500;
-    font-size: 23px;
-    line-height: 35px;
-    margin-bottom: 45px;
+  font-weight: 500;
+  font-size: 23px;
+  line-height: 35px;
+  margin-bottom: 45px;
 }
 
 h1>span {
-    color: #FEB633;
+  color: #feb633;
 }
 
 .btn {
-    padding: 14px 70px;
-    border: 1px solid #FEB633;
-    font-style: normal;
-    font-weight: 500;
-    font-size: 20px;
-    line-height: 35px;
-    color: #FEB633;
-    background: transparent;
-    box-sizing: border-box;
-    height: 60px;
-    min-width: 260px;
+  display: flex;
+  align-items: center;
+  border: 2px solid #feb633;
+  border-radius: 4px;
+  padding: 14px 70px;
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 35px;
+  color: #feb633;
+  background: transparent;
+  box-sizing: border-box;
+  height: 60px;
+  width: 260px;
+}
+
+/*način kada radimo sa gridom*/
+.left {
+  grid-column: span 5;
+  padding-top: 145px;
+  padding-bottom: 250px;
 }
 
 .right {
-    display: flex;
-    justify-content: flex-end;
-    position: absolute;
-    bottom: 0;
-    right: 135px;
+  grid-column: span 7;
+  padding-top: 70px;
 }
 
+/* 2. način sa flexom
+.right {
+  display: flex;
+  justify-content: flex-end;
+  position: absolute;
+  bottom: 0;
+  right: 135px;
+}*/
 .about-me {
-    padding-top: 120px;
-    padding-bottom: 210px;
+  padding-top: 120px;
+  padding-bottom: 250px;
 }
 
 .am-title {
-    grid-column: span 5;
-    background-image: url("/assets/img/about_shap_bg\ 1.png");
-    background-size: cover;
+  grid-column: span 5;
+  background: url("../img/about.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  position: relative;
 }
 
 .am-content {
-    grid-column: span 7;
+  grid-column: span 7;
 }
 
 .am-title h2 {
-    font-weight: 700;
-    font-size: 45px;
-    line-height: 54px;
-    align-self: center;
+  font-weight: 700;
+  font-size: 45px;
+  line-height: 54px;
+  color: #cccccc;
+  text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  position: absolute;
+  right: 67px;
+  top: 133px;
+}
+
+.am-title h2::after {
+  content: "";
+  height: 4px;
+  width: 100px;
+  background: #feb633;
+  position: absolute;
+  top: 60px;
+  left: 0;
 }
 
 .am-content p {
-    font-size: 16px;
-    line-height: 28px;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 28px;
+  color: #9f9f9f;
+  margin-bottom: 45px;
 }
 
-.am-content>div {
-    margin-top: 45px;
-    display: flex;
-    gap: 30px;
-    justify-content: flex-start;
+.button-holder {
+  display: flex;
+  gap: 30px;
 }
 
-.am-content button {
-    font-size: 20px;
-    line-height: 35px;
-    border-radius: 4px;
-    background-color: #FEB633;
-    color: #FFFFFF;
-    border: 2px #FEB633 solid;
-    padding: 14px 40px 15px 40px;
+.custom-btn {
+  background: transparent;
+  border: 2px solid #feb633;
+  border-radius: 4px;
+  color: #feb633;
+  padding: 14px 40px;
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 35px;
+  height: 64px;
+  width: max-content;
 }
 
-.am-content button:not(:first-of-type) {
-    color: #FEB633;
-    background: none;
+.fill {
+  background: #feb633;
+  color: #fff;
 }
 
+@media (hover: hover) {
+
+  .btn:hover,
+  .custom-btn:hover {
+    background: #feb633;
+    color: #fff;
+    transition: all 0.35s ease;
+  }
+
+  .fill:hover {
+    background: transparent;
+    color: #feb633;
+  }
+}
+
+/* Priča o selektoru
+a {
+}
+a:visited {
+  color: purple;
+}
+a:hover {
+  color: red;
+  text-decoration: dotted;
+}
+a:active {
+  color: yellow;
+  text-decoration: line-through;
+}
+a.highliht:hover{
+
+}
+div:hover
+p.first-child
+p.last-child
+p i:first-child
+p:first-child i
+
+p::first-line
+p.intro::first-line
+
+h1::before
+h1::after
+*/
 .rectangle {
-    grid-column: span 6;
-    box-sizing: border-box;
-    padding: 60px 80px 64px 80px;
-    color: #FFFFFF;
-    border-radius: 10px;
-    max-width: 570px;
-}
-
-.rectangle h3 {
-    font-family: 'Poppins';
-    font-style: normal;
-    font-weight: 600;
-    font-size: 36px;
-    line-height: 38px;
-    margin-bottom: 15px;
-    margin-top: 20px;
-}
-
-.rectangle p {
-    font-family: 'Poppins';
-    font-style: normal;
-    font-weight: 400;
-    font-size: 16px;
-    line-height: 30px;
-}
-
-.blue {
-    background: rgba(36, 176, 254, 0.5);
-    margin-bottom: 30px;
-}
-
-.yellow {
-    background: rgba(254, 187, 36, 0.5);
-    margin-bottom: 30px;
-}
-
-.pink {
-    background: rgba(214, 54, 208, 0.5);
-}
-
-.green {
-    background: rgba(2, 204, 71, 0.5);
-
+  grid-column: span 6;
+  padding: 62px 80px;
+  border-radius: 10px;
+  color: #fff;
+  max-width: 570px;
 }
 
 .rectangle>img {
-    height: 58px;
-    width: auto;
+  height: 58px;
+  width: auto;
+}
+
+h4 {
+  font-weight: 600;
+  font-size: 36px;
+  line-height: 38px;
+  color: #fff;
+  margin-top: 20px;
+  margin-bottom: 15px;
+}
+
+.rectangle>p {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 30px;
+  color: #fff;
+}
+
+.blue {
+  background: rgba(36, 176, 254, 0.5);
+}
+
+.yellow {
+  background: rgba(254, 187, 36, 0.5);
+}
+
+.purple {
+  background: rgba(214, 54, 208, 0.5);
+}
+
+.green {
+  background: rgba(2, 204, 71, 0.5);
+}
+
+.services-title {
+  grid-column: span 12;
+}
+
+.services-title p {
+  font-family: 'Poppins';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+  text-align: center;
+  color: #9F9F9F;
+  text-align: center;
+  margin: 0 auto;
+}
+
+.services-title h2 {
+  font-family: 'Poppins';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 45px;
+  line-height: 68px;
+  color: #CCCCCC;
+  margin-bottom: 50px;
+  text-align: center;
+}
+
+.services-title h2::after {
+  content: "";
+  height: 4px;
+  width: 100px;
+  background: #feb633;
+  position: absolute;
+  margin-top: 68px;
+  left: 50%;
+  transform: translateX(-50%);
 }
