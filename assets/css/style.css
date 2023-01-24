@@ -332,3 +332,69 @@ h4 {
   left: 50%;
   transform: translateX(-50%);
 }
+
+.contact {
+  margin-top: 210px;
+}
+
+.contact-title {
+  grid-column: span 12;
+}
+
+.contact-title h2 {
+  text-align: center;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 45px;
+  line-height: 68px;
+  color: #CCCCCC;
+}
+
+.contact-title h2::after {
+  content: "";
+  height: 4px;
+  width: 100px;
+  background: #feb633;
+  position: absolute;
+  margin-top: 68px;
+  margin-bottom: 35px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.contact .left {
+  grid-column: span 3;
+}
+
+.contact .right {
+  grid-column: span 9;
+}
+
+.contact .left h5 {
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 30px;
+  color: #CCCCCC;
+  margin-bottom: 30px;
+}
+
+.contact .left p {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 27px;
+  color: #727B86;
+}
+
+.contact .left p a{
+  text-decoration: none;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 27px;
+  color: #727B86;
+}
+
+.contact .left p:not(:last-child):not(:nth-child(4)){
+  margin-bottom: 35px;
+}
