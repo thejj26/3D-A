@@ -363,11 +363,8 @@ h4 {
 }
 
 .contact .left {
-  grid-column: span 3;
-}
-
-.contact .right {
-  grid-column: span 9;
+  grid-column: span 4;
+  padding: 0;
 }
 
 .contact .left h5 {
@@ -397,4 +394,29 @@ h4 {
 
 .contact .left p:not(:last-child):not(:nth-child(4)){
   margin-bottom: 35px;
+}
+
+.contact-form{
+  grid-column: span 8;
+  display: grid;
+  grid-template-columns: repeat(8, minmax(0,1fr));
+  gap:30px;
+  grid-auto-rows: min-content;
+}
+
+.full{
+  grid-column: span 8;
+}
+
+.half{
+  grid-column: span 4;
+}
+
+label{
+  display: block;
+  font-weight: 500;
+  font-size: 15px;
+  line-height: 22px;
+  color:#777777;
+  margin-bottom: 14px;
 }
