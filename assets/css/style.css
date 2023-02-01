@@ -399,11 +399,15 @@ h4 {
 .contact-form{
   grid-column: span 8;
   display: grid;
-  grid-template-columns: repeat(8, minmax(0,1fr));
+  grid-template-columns: repeat(8,minmax(0,1fr));
   gap:30px;
   grid-auto-rows: min-content;
 }
 
+
+.contact-form__field-input{
+ /*todo*/
+}
 .full{
   grid-column: span 8;
 }
@@ -419,4 +423,20 @@ label{
   line-height: 22px;
   color:#777777;
   margin-bottom: 14px;
+  font-variant: small-caps;
 }
+
+.contact-form__field-input,
+.contact-form__field-textarea{
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 22px;
+  color:#777777;
+  padding: 0 25px;
+  background: #363737;
+  border: none;
+  outline: none;
+  width: 100%;
+  height: 60px;
+  box-sizing: border-box;
+} 
